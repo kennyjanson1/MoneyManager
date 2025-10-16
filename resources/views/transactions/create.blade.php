@@ -107,10 +107,10 @@
 
                     {{-- Date --}}
                     <div>
-                        <label for="date" class="block text-gray-700 font-bold mb-3 text-lg">
+                        <label for="transaction_date" class="block text-gray-700 font-bold mb-3 text-lg">
                             📅 Tanggal
                         </label>
-                        <input type="date" name="date" id="date" value="{{ old('date', date('Y-m-d')) }}" required
+                        <input type="date" name="transaction_date" id="transaction_date" value="{{ old('transaction_date', date('Y-m-d')) }}" required
                             class="w-full px-4 py-4 border-2 border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg">
                     </div>
 
