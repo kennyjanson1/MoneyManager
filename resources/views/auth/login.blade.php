@@ -63,7 +63,7 @@
             <!-- Sign Up Button -->
             <div class="mb-4">
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-200">
-                    Sign up
+                    Login
                 </button>
             </div>
             <!-- Sign Up Link -->
