@@ -3,10 +3,8 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\MoneyController;
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;   
-
-// The root route is MOVED and will now be the first route inside the 
-// authenticated group to ensure the user is logged in before accessing it.
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', [DashboardController::class, 'index']);
@@ -17,6 +15,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Route ke MoneyController
     Route::get('/money', [MoneyController::class, 'index'])->name('money.index');
 });
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 // A route for guests (unauthenticated users) can be added here if needed, 
